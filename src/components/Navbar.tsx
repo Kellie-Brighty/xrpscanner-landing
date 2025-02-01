@@ -173,6 +173,27 @@ const Navbar = () => {
           >
             Demo
           </a>
+
+          {/* Add Social Links */}
+          <div className="flex items-center gap-4 py-2">
+            <a
+              href="https://x.com/XrpScanBot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-dark-100 text-gray-600 dark:text-gray-300"
+            >
+              <XIcon />
+            </a>
+            <a
+              href="https://t.me/XrpBotScan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-dark-100 text-gray-600 dark:text-gray-300"
+            >
+              <TelegramIcon />
+            </a>
+          </div>
+
           <a
             href="https://t.me/xrpscanner_bot"
             className="block w-full text-center px-6 py-2.5 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors"
