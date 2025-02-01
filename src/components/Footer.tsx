@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/animation";
+import { useTheme } from "../context/ThemeContext";
+import xrpLogo from "../assets/xrp-logo.png";
+import xrpLogoDark from "../assets/xrp-logo-dark.png";
 
 const Footer = () => {
+  const { isDark } = useTheme();
+
   return (
     <footer className="w-full bg-gray-50 dark:bg-dark-100/20">
       <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -13,9 +18,16 @@ const Footer = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              XRP Scanner Bot
-            </h3>
+            <div className="flex items-center gap-2 mb-4">
+              <img 
+                src={isDark ? xrpLogoDark : xrpLogo}
+                alt="XRP Logo" 
+                className="w-8 h-8"
+              />
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                XRP Scanner Bot
+              </h3>
+            </div>
             <p className="text-gray-600 dark:text-gray-400">
               Your trusted companion for XRP token analysis
             </p>
